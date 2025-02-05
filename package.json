@@ -1,12 +1,14 @@
 {
   "name": "vue3-components",
   "version": "1.0.0",
-  "private": true,
-  "main": "src/index.js",
-  "module": "src/index.js",
+  "main": "dist/vue3-components.umd.js",
+  "module": "dist/vue3-components.esm.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name vue3-components --dest dist src/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -40,19 +42,6 @@
     "sass-loader": "^12.0.0"
   },
   "peerDependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.6.0",
-    "@fortawesome/free-brands-svg-icons": "^6.6.0",
-    "@fortawesome/free-regular-svg-icons": "^6.6.0",
-    "@fortawesome/free-solid-svg-icons": "^6.6.0",
-    "@fortawesome/vue-fontawesome": "^3.0.8",
-    "@vueuse/core": "^10.11.1",
-    "axios": "^1.7.9",
-    "bootstrap": "^5.3.3",
-    "core-js": "^3.8.3",
-    "maska": "^3.0.0",
-    "pinia": "^2.3.0",
-    "popper": "^1.0.1",
-    "vue": "^3.2.13",
-    "vuex": "^4.0.0"
+    "vue": "^3.2.13"
   }
 }
