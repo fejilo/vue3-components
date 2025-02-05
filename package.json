@@ -1,6 +1,6 @@
 {
-  "name": "components",
-  "version": "0.1.0",
+  "name": "vue3-components",
+  "version": "1.0.0",
   "private": true,
   "main": "dist/index.js",
   "scripts": {
