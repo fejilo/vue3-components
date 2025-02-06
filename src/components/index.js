@@ -14,8 +14,14 @@ import FormFieldInput from '@/components/Form/FormFieldInput.vue';
 import FormFieldCheckbox from '@/components/Form/FormFieldCheckbox.vue';
 import FormFieldInputMultiple from '@/components/Form/FormFieldInputMultiple.vue';
 import Icon from '@/components/Icon/Icon.vue';
+
 import Container from '@/components/Layout/Container.vue';
 import Overlay from '@/components/Layout/Overlay.vue';
+import Bottom from '@/components/Layout/Sections/Bottom.vue';
+import Middle from '@/components/Layout/Sections/Middle.vue';
+import Side from '@/components/Layout/Sections/Side.vue';
+import Top from '@/components/Layout/Sections/Top.vue';
+
 import Table from '@/components/List/Table/Table.vue';
 import TableColumn from '@/components/List/Table/Column.vue';
 import TableHeader from '@/components/List/Table/Header.vue';
@@ -43,6 +49,10 @@ export default {
   Icon,
   Container,
   Overlay,
+  Bottom,
+  Middle,
+  Side,
+  Top,
   Table,
   TableColumn,
   TableHeader,
