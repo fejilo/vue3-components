@@ -28,7 +28,7 @@
       size: {
         type: String,
         default: 'md', // Default size
-        validator: value => ['sm', 'md', 'lg', 'fullscre'].includes(value),
+        validator: value => ['sm', 'md', 'lg', 'fullscreen'].includes(value),
       },
       closeOnBackdropClick: {
         type: Boolean,

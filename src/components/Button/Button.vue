@@ -2,7 +2,7 @@
   <button
     :class="['btn', `btn-${type}`, `btn-${size}`, { 'btn-disabled': disabled || localLoading }]"
     :disabled="disabled || localLoading"
-    @click="handleClick"
+    @click.prevent="handleClick"
     @mouseover="handleMouseOver"
     @mouseout="handleMouseOut"
     @focus="handleFocus"
@@ -22,7 +22,8 @@
       type: {
         type: String,
         default: 'primary',
-        validator: value => ['primary', 'secondary', 'danger', 'success', 'info', 'warning', 'light', 'dark', 'link'].includes(value),
+        validator: value =>
+          ['primary', 'secondary', 'danger', 'success', 'info', 'warning', 'light', 'dark', 'link'].includes(value),
       },
       size: {
         type: String,
