@@ -1,12 +1,14 @@
 <template>
-  <FileDrop :accept="accept" @files-added="handleFilesAdded" />
-  <FileList
-    :fileList="cFiles"
-    :showActionButtons="true"
-    :showSetButton="false"
-    :showEditButton="false"
-    @delete="handleFileDelete"
-  />
+  <div>
+    <FileDrop :accept="accept" @files-added="handleFilesAdded" />
+    <FileList
+      :fileList="cFiles"
+      :showActionButtons="true"
+      :showSetButton="false"
+      :showEditButton="false"
+      @delete="handleFileDelete"
+    />
+  </div>
 </template>
 
 <script>
