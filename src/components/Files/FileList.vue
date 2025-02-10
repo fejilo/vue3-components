@@ -73,22 +73,21 @@
         </template>
       </template>
     </template>
+    <Overlay
+      ref="overlayRef"
+      :showClose="true"
+      :closeOnBackdropClick="false"
+      position="left"
+      @toggle="handleOverlayToggle"
+    >
+      <FileViewer
+        class="file-list-file-viewer"
+        ref="fileViewerRef"
+        :fileList="cFileList"
+        :key="`fv-${cFileList.length}`"
+      />
+    </Overlay>
   </div>
-
-  <Overlay
-    ref="overlayRef"
-    :showClose="true"
-    :closeOnBackdropClick="false"
-    position="left"
-    @toggle="handleOverlayToggle"
-  >
-    <FileViewer
-      class="file-list-file-viewer"
-      ref="fileViewerRef"
-      :fileList="cFileList"
-      :key="`fv-${cFileList.length}`"
-    />
-  </Overlay>
 </template>
 
 <script>
