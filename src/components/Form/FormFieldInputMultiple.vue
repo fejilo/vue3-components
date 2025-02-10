@@ -37,7 +37,7 @@
       required: { type: Boolean, default: false },
     },
     emits: ['update:modelValue'],
-    setup(props, { expose }) {
+    setup(props, { emit, expose }) {
       const values = ref(props.modelValue);
 
       /* Watchers */
@@ -49,12 +49,9 @@
         }
       );
 
-      watch(
-        () => values.value,
-        nv => {
-          this.$emit('update:modelValue', nv);
-        }
-      );
+      watch(values.value, nv => {
+        emit('update:modelValue', nv);
+      });
 
       const add = (val = null) => values.value.push(val);
       const remove = index => values.value.splice(index, 1);
