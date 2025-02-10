@@ -18,7 +18,7 @@
 </template>
 
 <script>
-  import { defineComponent, ref } from 'vue';
+  import { defineComponent, ref, watch } from 'vue';
   import Icon from '@/components/Icon/Icon.vue';
   import uuid from '@/utils/uuid.js';
   export default defineComponent({
@@ -39,6 +39,22 @@
     emits: ['update:modelValue'],
     setup(props, { expose }) {
       const values = ref(props.modelValue);
+
+      /* Watchers */
+
+      watch(
+        () => props.modelValue,
+        nv => {
+          values.value = nv;
+        }
+      );
+
+      watch(
+        () => values.value,
+        nv => {
+          this.$emit('update:modelValue', nv);
+        }
+      );
 
       const add = (val = null) => values.value.push(val);
       const remove = index => values.value.splice(index, 1);
