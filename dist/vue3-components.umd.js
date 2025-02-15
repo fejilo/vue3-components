@@ -11555,9 +11555,9 @@ var FileDropvue_type_style_index_0_id_2b6ac286_scoped_true_lang_css = __webpack_
 const FileDrop_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(FileDropvue_type_script_lang_js, [['render',FileDropvue_type_template_id_2b6ac286_scoped_true_render],['__scopeId',"data-v-2b6ac286"]])
 
 /* harmony default export */ var FileDrop = (FileDrop_exports_);
-;// ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Files/FileInput.vue?vue&type=template&id=17ee6b73
+;// ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Files/FileInput.vue?vue&type=template&id=2cedfc74
 
-function FileInputvue_type_template_id_17ee6b73_render(_ctx, _cache, $props, $setup, $data, $options) {
+function FileInputvue_type_template_id_2cedfc74_render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_FileDrop = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.resolveComponent)("FileDrop");
   const _component_FileList = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.resolveComponent)("FileList");
   return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("div", null, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)(_component_FileDrop, {
@@ -11571,7 +11571,7 @@ function FileInputvue_type_template_id_17ee6b73_render(_ctx, _cache, $props, $se
     onDelete: _ctx.handleFileDelete
   }, null, 8, ["fileList", "onDelete"])]);
 }
-;// ./src/components/Files/FileInput.vue?vue&type=template&id=17ee6b73
+;// ./src/components/Files/FileInput.vue?vue&type=template&id=2cedfc74
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/esnext.iterator.every.js
 var esnext_iterator_every = __webpack_require__(3215);
@@ -12593,6 +12593,9 @@ const FileList_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(FileListv
     emit
   }) {
     const files = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)(props.modelValue);
+    (0,external_commonjs_vue_commonjs2_vue_root_Vue_.watch)(() => props.modelValue, nv => {
+      files.value = nv;
+    });
     const cFiles = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.computed)(() => {
       let fileList = Array.from(files.value);
       return fileList.map(file => {
@@ -12641,7 +12644,7 @@ const FileList_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(FileListv
 
 
 ;
-const FileInput_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(FileInputvue_type_script_lang_js, [['render',FileInputvue_type_template_id_17ee6b73_render]])
+const FileInput_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(FileInputvue_type_script_lang_js, [['render',FileInputvue_type_template_id_2cedfc74_render]])
 
 /* harmony default export */ var FileInput = (FileInput_exports_);
 ;// ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Form/Form.vue?vue&type=template&id=78e9b2aa

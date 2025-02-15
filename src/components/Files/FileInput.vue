@@ -12,7 +12,7 @@
 </template>
 
 <script>
-  import { defineComponent, ref, computed } from 'vue';
+  import { defineComponent, ref, computed, watch } from 'vue';
   import FileDrop from '@/components/Files/FileDrop.vue';
   import FileList from '@/components/Files/FileList.vue';
   import uuid from '@/utils/uuid.js';
@@ -43,6 +43,13 @@
     emits: ['update:modelValue', 'change'],
     setup(props, { emit }) {
       const files = ref(props.modelValue);
+
+      watch(
+        () => props.modelValue,
+        nv => {
+          files.value = nv;
+        }
+      );
 
       const cFiles = computed(() => {
         let fileList = Array.from(files.value);
